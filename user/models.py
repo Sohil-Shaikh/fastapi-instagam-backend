@@ -14,5 +14,3 @@ class User(Base):
     posts = relationship("UserPosts", back_populates="user", cascade="all, delete-orphan")
     def __repr__(self):
         return f"<User user_id={self.user_id}\n username={self.username}\n email = {self.email}\n password={self.password} >"
-    
-    
