@@ -10,5 +10,6 @@ Sessionlocal = sessionmaker(bind=engine,expire_on_commit= False)
 
 session = Sessionlocal()
 
+
 class Base(DeclarativeBase):
     ...

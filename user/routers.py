@@ -12,9 +12,9 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/user/login/")
 def regiser_user(register : CreateUser):
     return create_user(register)
 
-@router.post("/login/")
-def login_user(form_data: OAuth2PasswordRequestForm = Depends()):
-    return login_users(form_data)
+# @router.post("/login/")
+# def login_user(form_data: OAuth2PasswordRequestForm = Depends()):
+#     return login_users(form_data)
 
 @router.put("/changepas/")
 def change_pas(new_password:str, token: str = Depends(oauth2_scheme)):
